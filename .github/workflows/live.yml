@@ -12,4 +12,4 @@ jobs:
 
     - name: Start Streaming
       run: |
-        ffmpeg -re -i "https://docs.google.com/uc?export=download&id=1cFkAi_I26R1-F8lMIHXhHUbKggduuNgq" -c:v libx264 -preset veryfast -b:v 3000k -maxrate 3000k -bufsize 6000k -pix_fmt yuv420p -g 50 -c:a aac -b:a 128k -f flv rtmp://a.rtmp.youtube.com/live2/${{ secrets.STREAM_KEY }}
+        ffmpeg -re -i "https://docs.google.com/uc?export=download&id=1cFkAi_I26R1-F8lMIHXhHUbKggduuNgq" -c:v libx264 -preset ultrafast -b:v 2000k -maxrate 2000k -bufsize 4000k -pix_fmt yuv420p -g 50 -c:a aac -b:a 128k -f flv rtmp://a.rtmp.youtube.com/live2/${{ secrets.STREAM_KEY }}
